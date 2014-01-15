@@ -1,0 +1,1 @@
+只将license.dat放入arm/adsv1_2/licenses/下即可.

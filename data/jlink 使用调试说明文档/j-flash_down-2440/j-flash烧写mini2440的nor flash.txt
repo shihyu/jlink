@@ -1,0 +1,10 @@
+mini2440官方使用手册是用并口编程器配合H-JTAG烧写bootloader(例如supervivi)到NOR Flash, 但此方法速度比较慢, 而且现在许多机器已经没有并口了. 
+
+J-Link有一个功能很强大的Flash烧写工具叫J-Flash，但是对于S3C2440的NOR Flash操作有些麻烦：烧写NOR Flash时需要设置SDRAM，否则速率很慢. 我已经搅好了J-Link的配置文件, 可以使用SDRAM作缓冲以提高烧写NOR flash的速度. 
+
+测试成功了! 清除, 烧写及校验祗共用了8.3秒. 
+
+J-link配置文件:mini2440-SST39VF1601.jflash
+
+
+其他2440的板也可以用的, 不过要在Project Settings -> Flash裡NOR Flash修改一下NOR Flash的形号. 因为其他2440板不一定跟mini2440一样用SST39VF1601的. 不过SDRAM的地址及暂存器init sequence参数应该一样的. 
